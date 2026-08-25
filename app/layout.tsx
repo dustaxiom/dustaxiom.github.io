@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import './game.css';
+import './motion.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://dustaxiom.github.io'),

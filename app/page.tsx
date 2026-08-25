@@ -15,12 +15,14 @@ export default function Home() {
       <h1>From simple rules,<br /><em>infinite worlds.</em></h1>
       <p className="heroCopy">Every world begins with dust and a few simple rules.</p>
       <a className="scrollCue" href="#worlds"><span>Explore our worlds</span><b>↓</b></a>
-      <div className="orbit orbitOne" /><div className="orbit orbitTwo" /><div className="dustField" aria-hidden="true" />
+      <div className="orbit orbitOne" /><div className="orbit orbitTwo" />
+      <div className="energyLine" aria-hidden="true" />
+      <div className="dustField" aria-hidden="true">{Array.from({length:18},(_,i)=><span key={i} />)}</div>
     </section>
     <section className="worlds shell" id="worlds">
       <div className="sectionLabel"><span>01</span><p>Selected worlds</p></div>
       <div className="gameGrid">{games.map((game, i) => <Link className="gameCard" href={`/games/${game.slug}`} key={game.slug} style={{'--accent': game.accent} as React.CSSProperties}>
-        <div className="gameImage"><Image src={game.image} alt="" fill sizes="(max-width: 800px) 100vw, 33vw" /><span className="cardIndex">0{i + 1}</span></div>
+        <div className="gameImage"><Image src={game.image} alt="" fill sizes="(max-width: 800px) 100vw, 33vw" /><i className="cardSweep"/><span className="cardIndex">0{i + 1}</span></div>
         <div className="cardMeta"><div><p>{game.type}</p><h2>{game.title}</h2></div><span className="arrow">↗</span></div>
       </Link>)}</div>
     </section>
