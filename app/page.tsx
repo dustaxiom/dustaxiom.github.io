@@ -30,6 +30,6 @@ export default function Home() {
       <div className="sectionLabel"><span>02</span><p>Our axiom</p></div>
       <div className="manifestoGrid"><p className="formula">MATTER <i>×</i> RULES <i>→</i> WORLD</p><div><h2>Small beginnings.<br />Unbounded possibility.</h2><p>We make focused games where clear systems collide with player curiosity. Particles become pixels. Rules become play. Play becomes a world that belongs to you.</p></div></div>
     </section>
-    <footer className="homeFooter shell"><p>DUSTAXIOM</p><div><span>Matter. Particles. Possibility.</span><span>Rules. Structure. Order.</span></div><a href="mailto:everettjf@live.com">everettjf@live.com ↗</a></footer>
+    <footer className="homeFooter shell"><p>DUSTAXIOM</p><div><span>Matter. Particles. Possibility.</span><span>Rules. Structure. Order.</span></div><div className="homeFooterLinks"><Link href="/games/wedge-storm-chaser/privacy/">Privacy</Link><a href="mailto:everettjf@live.com">everettjf@live.com ↗</a></div></footer>
   </main>;
 }

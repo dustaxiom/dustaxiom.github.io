@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import './game.css';
 import './motion.css';
+import './cosmic.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://dustaxiom.github.io'),
@@ -27,7 +28,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className="cosmicEvents" aria-hidden="true">
+          <div className="distantGalaxy galaxyOne"><i /><i /><i /></div>
+          <div className="distantGalaxy galaxyTwo"><i /><i /></div>
+          <span className="comet cometOne" />
+          <span className="comet cometTwo" />
+          <span className="comet cometThree" />
+        </div>
+        {children}
+      </body>
     </html>
   );
 }
