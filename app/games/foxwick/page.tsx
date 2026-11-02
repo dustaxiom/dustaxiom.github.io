@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 // Flip to the live listing once Apple releases the app.
-const appStore = { live: false, url: 'https://apps.apple.com/app/id6828063453' };
+const appStore = { live: true, url: 'https://apps.apple.com/us/app/foxwick/id6828063453' };
 
 const classes = [
   { id: 'samurai', name: 'Samurai', title: 'The Bladebearer', line: 'Steady steps, clean cuts. A charged blow cleaves a whole crowd.', color: '#D9482B', stats: { HP: 4, STA: 3, MOV: 3 } },
