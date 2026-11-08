@@ -124,7 +124,7 @@ export default function FoxwickPage() {
 
     <section className="fxSection fxPromise">
       <div className="fxWrap">
-        <ul>{['No ads', 'No tracking', 'No account', 'Plays offline', 'No in-app purchases'].map(t => <li key={t}>{t}</li>)}</ul>
+        <ul>{['No ads', 'No tracking', 'No account', 'Plays offline', 'Stages 1–10 free'].map(t => <li key={t}>{t}</li>)}</ul>
         <div className="fxFinal">
           <img src="/games/foxwick/icon.png" alt="Foxwick app icon" width={112} height={112} />
           <h2>Light the campfire.</h2>
