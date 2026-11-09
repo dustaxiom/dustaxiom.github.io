@@ -27,10 +27,13 @@ export default function SupportPage() {
         <p>Resting at a campfire saves your progress and refills your vials, and it also brings every monster in the stage back. If you fall, your Embers stay where you dropped them: return to that spot to recover them.</p>
         <h2>Saving and starting over</h2>
         <p>Progress saves on your iPhone automatically. Continue on the title screen returns you to your last campfire. New Game clears your campfires and defeated bosses. Progress does not sync between devices, and deleting the app removes it.</p>
+        <h2>The Full Journey</h2>
+        <p>Stages 1 to 10, through the Bell Tower Summit, are free. The Full Journey is a one-time in-app purchase that opens stages 11 to 20, the twenty-boss Rush, New Journey+, and the deepest Ember Trial bosses. Open it from the gold Full Journey button on the second page of the Stage Map, or from stage 11 once the Bell Tower boss is down.</p>
+        <p>Bought it on another iPhone, or reinstalled Foxwick? Tap the gear on the title screen and choose Restore Purchases, signed in to the same Apple Account. Apple handles payments and refunds: to ask for a refund, visit <a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a>.</p>
         <h2>Settings</h2>
         <p>Tap the gear on the title screen to turn music, sound effects, haptics, and damage numbers on or off. Foxwick also follows Reduce Motion in iOS Settings, which removes screen shake and knockback.</p>
         <h2>Requirements</h2>
-        <p>iPhone with iOS 26 or later. Foxwick plays in landscape and works fully offline.</p>
+        <p>iPhone with iOS 26 or later. Foxwick plays in landscape and works fully offline; buying or restoring the Full Journey needs an internet connection.</p>
       </article>
     </div>
     <footer className="policyFooter shell">
