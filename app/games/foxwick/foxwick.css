@@ -104,6 +104,14 @@ a.fxStore:hover{transform:translateY(-2px);background:#fff}
 .fxGallery:focus-visible{outline:2px solid var(--flame);outline-offset:4px}
 
 /* promise + final */
+.fxChapter{display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin:44px 0 6px}
+.fxChapter h3{margin:0;font:700 26px var(--pixel);color:var(--bone)}
+.fxChapter span{font:600 13px var(--pixel);letter-spacing:.06em;text-transform:uppercase;padding:5px 10px;border:2px solid var(--gold);color:var(--gold)}
+.fxChapter span.fxFree{border-color:var(--flame);color:var(--flame)}
+.fxModes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.fxModes article{background:var(--card);border:3px solid #3A3A4E;padding:24px}
+.fxModes h3{margin:0;font:700 22px var(--pixel);color:var(--bone)}
+.fxModes p{margin:10px 0 0;color:var(--ash);font-size:15.5px;line-height:1.55}
 .fxPromise{padding-top:40px;text-align:center}
 .fxPromise ul{list-style:none;margin:0 0 90px;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
 .fxPromise li{font:600 16px var(--pixel);padding:10px 18px;border:2px solid #3A3A4E;background:var(--card);color:var(--bone)}
@@ -125,6 +133,7 @@ a.fxStore:hover{transform:translateY(-2px);background:#fff}
   .fxFeature{grid-template-columns:1fr;gap:26px;margin-bottom:70px}
   .fxFlip .fxShot{order:0}
   .fxStages{grid-template-columns:1fr}
+  .fxModes{grid-template-columns:1fr}
 }
 @media (max-width:600px){
   .fxSection{padding:76px 0}

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import './foxwick.css';
 
-const intro = 'A pixel-art action game for iPhone. Choose a Samurai, Mage, or Assassin, read every wind-up, and carry the light through ten stages and the ten bosses that guard them.';
+const intro = 'A pixel-art action game for iPhone. Choose a Samurai, Mage, or Assassin, read every wind-up, and carry the light through twenty stages, from the Glimmer Fields to the surface of the Sun. The first ten are free.';
 
 export const metadata: Metadata = {
   title: 'Foxwick: Carry the Light — Pixel action for iPhone',
@@ -31,6 +31,31 @@ const stages = [
   ['Upside-Down Halls', 'Faceless Scribe', 'It writes the ending before you arrive.'],
   ['Lamplit Citadel', 'Lantern King', 'A thousand lamps, one cold crown.'],
   ['Bell Tower Summit', 'The Bellkeeper', 'The last bell waits to be rung.'],
+  ['Steamvent Basin', 'Geyser Warden', 'It keeps the water hot and the visitors away.'],
+  ['Giantwood Grove', 'Ironbark Ranger', 'Older than the trail, and still walking it.'],
+  ['The Great Canyon', 'Mesa Titan', 'The canyon was its footprint.'],
+  ['Windward Plateau', 'Stormhorn', 'Where it grazes, the thunder follows.'],
+  ['Aurora Peak', 'Aurora Herald', 'It hangs the lights at the top of the world.'],
+  ['The Quiet Moon', 'Moon Hare Knight', 'It has guarded the Moon since before the first fire.'],
+  ['Red Mars', 'Dust Tyrant', 'Red storms are its crown and its court.'],
+  ['Venus Veil', 'Veil Siren', 'Its song is warm, and the clouds are acid.'],
+  ['Mercury Dawnline', 'Quicksilver Duelist', 'First to the Sun, every morning.'],
+  ['Surface of the Sun', 'The Sunheart', 'The first fire. It wants to meet the last.'],
+];
+
+const chapters = [
+  { name: 'The Bell Road', from: 1, to: 10, tag: 'Free' },
+  { name: 'Wonders of the World', from: 11, to: 15, tag: 'Full Journey' },
+  { name: 'Toward the Sun', from: 16, to: 20, tag: 'Full Journey' },
+];
+
+const modes = [
+  { title: 'Skills and ultimates', body: 'Skill tomes wait along the road: ten skills for each class. Equip three, raise them to rank III, and fill the gauge to unleash a screen-filling ultimate won from bosses.' },
+  { title: 'Charms, medals and the fox\u2019s camp', body: 'Every boss you beat gives a free skill rank. Earn up to three medals a stage, win charms, and spend Embers at the fox\u2019s shop.' },
+  { title: 'Boss Rush', body: 'Fight the bosses back to back against the clock: the Bell Road\u2019s ten, or all twenty with the Full Journey.' },
+  { title: 'Ember Trial and Daily Trial', body: 'Endless rooms that grow harder the deeper you go, and one shared seed a day for everyone.' },
+  { title: 'New Journey+', body: 'Clear all twenty stages with the Full Journey, then set out again with your level, skills and charms against tougher foes.' },
+  { title: 'Game Center', body: '26 achievements and three leaderboards, if you want them. Foxwick plays just the same without.' },
 ];
 
 const features = [
@@ -57,7 +82,7 @@ export default function FoxwickPage() {
     <header className="fxNav">
       <div className="fxWrap fxNavInner">
         <a className="fxBrand" href="#top"><img src="/games/foxwick/icon.png" alt="" width={36} height={36} />Foxwick</a>
-        <nav aria-label="Foxwick"><a href="#trailer">Trailer</a><a href="#classes">Classes</a><a href="#stages">Stages</a><Link href="/games/foxwick/support/">Support</Link></nav>
+        <nav aria-label="Foxwick"><a href="#trailer">Trailer</a><a href="#classes">Classes</a><a href="#stages">Stages</a><a href="#modes">Modes</a><Link href="/games/foxwick/support/">Support</Link></nav>
         <StoreButton />
       </div>
     </header>
@@ -68,7 +93,7 @@ export default function FoxwickPage() {
         <p className="fxKicker">Pixel action · iPhone</p>
         <h1 className="fxLogo">Foxwick</h1>
         <p className="fxTagline">Carry the light.</p>
-        <p className="fxLede">Three classes. Ten stages. Ten bosses. Read every wind-up, roll through the swing, and strike in the opening.</p>
+        <p className="fxLede">Three classes. Twenty stages. Twenty bosses. Read every wind-up, roll through the swing, and strike in the opening.</p>
         <div className="fxCtas"><StoreButton big /><a className="fxGhost" href="#trailer">▶ Watch the trailer</a></div>
       </div>
       <div className="fxCamp" aria-hidden="true"><span className="fxGlow" /><img className="fxFire" src="/games/foxwick/campfire.png" alt="" /><img className="fxFox" src="/games/foxwick/fox.png" alt="" /></div>
@@ -108,10 +133,22 @@ export default function FoxwickPage() {
 
     <section className="fxSection fxStagesSec" id="stages">
       <div className="fxWrap">
-        <div className="fxHead"><p className="fxKicker">The road to dawn</p><h2>Ten stages. Ten bosses.</h2><p className="fxSub">Each stage ends with a boss that has its own moves and phases. Beat it to light the way to the next.</p></div>
-        <ol className="fxStages">
-          {stages.map(([stage, boss, line], i) => <li key={stage}><span className="fxNum">{String(i + 1).padStart(2, '0')}</span><div><h3>{stage}</h3><p><b>{boss}</b> · {line}</p></div></li>)}
-        </ol>
+        <div className="fxHead"><p className="fxKicker">The road to dawn</p><h2>Twenty stages. Twenty bosses.</h2><p className="fxSub">Each stage ends with a boss that has its own moves and phases. Beat it to light the way to the next. The Bell Road is free; the Full Journey, a one-time purchase, opens the road past the Bell Tower.</p></div>
+        {chapters.map(ch => <div key={ch.name}>
+          <div className="fxChapter"><h3>{ch.name}</h3><span className={ch.from === 1 ? 'fxFree' : undefined}>{ch.tag}</span></div>
+          <ol className="fxStages">
+            {stages.slice(ch.from - 1, ch.to).map(([stage, boss, line], i) => <li key={stage}><span className="fxNum">{String(ch.from + i).padStart(2, '0')}</span><div><h3>{stage}</h3><p><b>{boss}</b> · {line}</p></div></li>)}
+          </ol>
+        </div>)}
+      </div>
+    </section>
+
+    <section className="fxSection" id="modes">
+      <div className="fxWrap">
+        <div className="fxHead"><p className="fxKicker">More roads to run</p><h2>Grow your fighter.<br />Then test it.</h2></div>
+        <div className="fxModes">
+          {modes.map(m => <article key={m.title}><h3>{m.title}</h3><p>{m.body}</p></article>)}
+        </div>
       </div>
     </section>
 
@@ -124,7 +161,7 @@ export default function FoxwickPage() {
 
     <section className="fxSection fxPromise">
       <div className="fxWrap">
-        <ul>{['No ads', 'No tracking', 'No account', 'Plays offline', 'Stages 1–10 free'].map(t => <li key={t}>{t}</li>)}</ul>
+        <ul>{['Stages 1–10 free', 'One-time Full Journey', 'No ads', 'No subscriptions', 'No tracking', 'No account', 'Plays offline'].map(t => <li key={t}>{t}</li>)}</ul>
         <div className="fxFinal">
           <img src="/games/foxwick/icon.png" alt="Foxwick app icon" width={112} height={112} />
           <h2>Light the campfire.</h2>
