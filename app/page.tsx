@@ -5,7 +5,7 @@ const games = [
   { slug: 'wedge-storm-chaser', title: 'Wedge Storm Chaser', type: 'Storm chasing simulation', image: '/games/wedge.jpg', accent: '#ff754d' },
   { slug: 'aether-barrage-omega', title: 'Aether Barrage: Omega', type: 'Arcade shoot ’em up', image: '/games/aether.jpg', accent: '#59e8ff' },
   { slug: 'fivefold-front', title: 'Fivefold Front', type: 'Tactical card battler', image: '/games/fivefold.jpg', accent: '#e7ba63' },
-  { slug: 'foxwick', title: 'Foxwick', type: 'Pixel action adventure · iPhone', image: '/games/foxwick.jpg', accent: '#f08a3c' },
+  { slug: 'foxwick', title: 'Cinderwick', type: 'Pixel action adventure · iPhone', image: '/games/foxwick.jpg', accent: '#f08a3c' },
 ];
 
 export default function Home() {
