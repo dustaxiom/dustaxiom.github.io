@@ -30,11 +30,11 @@ export default function PrivacyPolicyPage() {
         <h2>Children&apos;s privacy</h2>
         <p>Because the game does not collect personal information from any user, it does not knowingly collect personal information from children.</p>
         <h2>Changes and contact</h2>
-        <p>If the game&apos;s data practices change, this policy will be updated before the relevant release. For privacy or support questions, email <a href="mailto:everettjf@live.com">everettjf@live.com</a>.</p>
+        <p>If the game&apos;s data practices change, this policy will be updated before the relevant release. For privacy or support questions, email <a href="mailto:atomsprout@gmail.com">atomsprout@gmail.com</a>.</p>
       </article>
     </div>
     <footer className="policyFooter shell">
-      <p>© 2026 DUSTAXIOM</p>
+      <p>© 2026 AtomSprout</p>
       <Link href="/games/fivefold-front/">Back to Fivefold Front ↗</Link>
     </footer>
   </main>;

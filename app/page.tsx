@@ -10,7 +10,7 @@ const games = [
 
 export default function Home() {
   return <main>
-    <nav className="nav shell"><Link className="wordmark" href="/"><span>DUST</span><span>AXIOM</span></Link><div className="navLinks"><a href="#worlds">Worlds</a><a href="#axiom">Axiom</a><a href="mailto:everettjf@live.com">Contact</a></div></nav>
+    <nav className="nav shell"><Link className="wordmark" href="/"><span>DUST</span><span>AXIOM</span></Link><div className="navLinks"><a href="#worlds">Worlds</a><a href="#axiom">Axiom</a><a href="mailto:atomsprout@gmail.com">Contact</a></div></nav>
     <section className="hero shell">
       <div className="eyebrow"><span /> Independent game studio</div>
       <h1>From simple rules,<br /><em>infinite worlds.</em></h1>
@@ -31,6 +31,6 @@ export default function Home() {
       <div className="sectionLabel"><span>02</span><p>Our axiom</p></div>
       <div className="manifestoGrid"><p className="formula">MATTER <i>×</i> RULES <i>→</i> WORLD</p><div><h2>Small beginnings.<br />Unbounded possibility.</h2><p>We make focused games where clear systems collide with player curiosity. Particles become pixels. Rules become play. Play becomes a world that belongs to you.</p></div></div>
     </section>
-    <footer className="homeFooter shell"><p>DUSTAXIOM</p><div><span>Matter. Particles. Possibility.</span><span>Rules. Structure. Order.</span></div><div className="homeFooterLinks"><Link href="/games/wedge-storm-chaser/privacy/">Privacy</Link><a href="mailto:everettjf@live.com">everettjf@live.com ↗</a></div></footer>
+    <footer className="homeFooter shell"><p>DUSTAXIOM</p><div><span>Matter. Particles. Possibility.</span><span>Rules. Structure. Order.</span></div><div className="homeFooterLinks"><Link href="/games/wedge-storm-chaser/privacy/">Privacy</Link><a href="mailto:atomsprout@gmail.com">atomsprout@gmail.com ↗</a></div></footer>
   </main>;
 }

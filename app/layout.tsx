@@ -5,7 +5,7 @@ import './motion.css';
 import './cosmic.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://dustaxiom.github.io'),
+  metadataBase: new URL('https://atomsprout.com'),
   title: 'DUSTAXIOM — From simple rules, infinite worlds.',
   description: 'An independent game studio creating infinite worlds from simple rules.',
   openGraph: {

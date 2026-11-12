@@ -7,8 +7,8 @@
   },
   "scripts": {
     "dev": "vinext dev",
-    "build": "vinext build",
-    "build:pages": "next build",
+    "build": "node scripts/build-redirects.mjs",
+    "build:pages": "node scripts/build-redirects.mjs",
     "start": "vinext start",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next"
   },
